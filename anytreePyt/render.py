@@ -55,7 +55,7 @@ class AsciiStyle(AbstractStyle):
         """
         Ascii style.
 
-        >>> from anytree import Node, RenderTree
+        >>> from anytreePyt import Node, RenderTree
         >>> root = Node("root")
         >>> s0 = Node("sub0", parent=root)
         >>> s0b = Node("sub0B", parent=s0)
@@ -78,7 +78,7 @@ class ContStyle(AbstractStyle):
         u"""
         Continued style, without gaps.
 
-        >>> from anytree import Node, RenderTree
+        >>> from anytreePyt import Node, RenderTree
         >>> root = Node("root")
         >>> s0 = Node("sub0", parent=root)
         >>> s0b = Node("sub0B", parent=s0)
@@ -103,7 +103,7 @@ class ContRoundStyle(AbstractStyle):
         u"""
         Continued style, without gaps, round edges.
 
-        >>> from anytree import Node, RenderTree
+        >>> from anytreePyt import Node, RenderTree
         >>> root = Node("root")
         >>> s0 = Node("sub0", parent=root)
         >>> s0b = Node("sub0B", parent=s0)
@@ -128,7 +128,7 @@ class DoubleStyle(AbstractStyle):
         u"""
         Double line style, without gaps.
 
-        >>> from anytree import Node, RenderTree
+        >>> from anytreePyt import Node, RenderTree
         >>> root = Node("root")
         >>> s0 = Node("sub0", parent=root)
         >>> s0b = Node("sub0B", parent=s0)
@@ -172,7 +172,7 @@ class RenderTree(object):
 
         It is up to the user to assemble these parts to a whole.
 
-        >>> from anytree import Node, RenderTree
+        >>> from anytreePyt import Node, RenderTree
         >>> root = Node("root", lines=["c0fe", "c0de"])
         >>> s0 = Node("sub0", parent=root, lines=["ha", "ba"])
         >>> s0b = Node("sub0B", parent=s0, lines=["1", "2", "3"])

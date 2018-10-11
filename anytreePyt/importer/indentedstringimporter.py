@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from anytree import AnyNode
+from anytreePyt import AnyNode
 
 
 def _get_indentation(line):
@@ -26,8 +26,8 @@ class IndentedStringImporter(object):
 
         Example using a string list:
 
-        >>> from anytree.importer import IndentedStringImporter
-        >>> from anytree import RenderTree
+        >>> from anytreePyt.importer import IndentedStringImporter
+        >>> from anytreePyt import RenderTree
         >>> importer = IndentedStringImporter()
         >>> lines = [
         ...    'Node1',

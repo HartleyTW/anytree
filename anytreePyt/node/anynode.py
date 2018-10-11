@@ -10,7 +10,7 @@ class AnyNode(NodeMixin, object):
         u"""
         A generic tree node with any `kwargs`.
 
-        >>> from anytree import AnyNode, RenderTree
+        >>> from anytreePyt import AnyNode, RenderTree
         >>> root = AnyNode(id="root")
         >>> s0 = AnyNode(id="sub0", parent=root)
         >>> s0b = AnyNode(id="sub0B", parent=s0, foo=4, bar=109)

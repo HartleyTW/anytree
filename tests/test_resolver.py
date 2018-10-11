@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from nose.tools import eq_
 
-import anytree as at
+import anytreePyt as at
 
 from helper import assert_raises
 

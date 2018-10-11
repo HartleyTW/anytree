@@ -23,8 +23,8 @@ def _read_metainfo(filepath):
     return metainfo
 
 
-config = _read_metainfo("anytree/__init__.py")
-config['name'] = 'anytree'
+config = _read_metainfo("anytreePyt/__init__.py")
+config['name'] = 'anytreePyt'
 config['license'] = 'Apache 2.0'
 config['classifiers'] = [
     'Development Status :: 5 - Production/Stable',
@@ -37,7 +37,7 @@ config['classifiers'] = [
     'Programming Language :: Python :: 3.6',
 ]
 config['keywords'] = 'tree, tree data, treelib, tree walk, tree structure'
-config['packages'] = ['anytree', 'anytree.node', 'anytree.iterators', 'anytree.importer', 'anytree.exporter', 'anytree.util']
+config['packages'] = ['anytreePyt', 'anytreePyt.node', 'anytreePyt.iterators', 'anytreePyt.importer', 'anytreePyt.exporter', 'anytreePyt.util']
 config['install_requires'] = ['six>=1.9.0']
 config['extras_require'] = {
     'dev': ['check-manifest'],

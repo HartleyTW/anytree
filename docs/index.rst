@@ -56,7 +56,16 @@ Usage is simple.
 
 **Construction**
 
->>> from anytree import Node, RenderTree
+>>> from anytreePyt import Node, RenderTree
+>>> udo = Node("Udo")
+>>> marc = Node("Marc", parent=udo)
+>>> lian = Node("Lian", parent=marc)
+>>> dan = Node("Dan", parent=udo)
+>>> jet = Node("Jet", parent=dan)
+>>> jan = Node("Jan", parent=dan)
+>>> joe = Node("Joe", parent=dan)
+
+
 >>> udo = Node("Udo")
 >>> marc = Node("Marc", parent=udo)
 >>> lian = Node("Lian", parent=marc)
@@ -75,6 +84,34 @@ Node('/Udo/Dan/Joe')
 **Tree**
 
 >>> for pre, fill, node in RenderTree(udo):
+...     print("%s%s" % (pre, node.name))
+Udo
+├── Marc
+│   └── Lian
+└── Dan
+    ├── Jet
+    ├── Jan
+    └── Joe
+
+>>> from anytreePyt.exporter import DotExporter
+>>> # graphviz needs to be installed for the next line!
+>>> DotExporter(udo).to_picture("udo.png")
+
+
+...     print("%s%s" % (pre, node.name))
+Udo
+├── Marc
+│   └── Lian
+└── Dan
+    ├── Jet
+    ├── Jan
+    └── Joe
+
+>>> from anytreePyt.exporter import DotExporter
+>>> # graphviz needs to be installed for the next line!
+>>> DotExporter(udo).to_picture("udo.png")
+
+
 ...     print("%s%s" % (pre, node.name))
 Udo
 ├── Marc

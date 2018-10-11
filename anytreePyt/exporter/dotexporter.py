@@ -5,7 +5,7 @@ from os import remove
 from subprocess import check_call
 from tempfile import NamedTemporaryFile
 
-from anytree import PreOrderIter
+from anytreePyt import PreOrderIter
 
 
 class DotExporter(object):
@@ -46,7 +46,7 @@ class DotExporter(object):
                           argument. The first the node and the second the child
                           and return the edge (i.e. '->').
 
-        >>> from anytree import Node
+        >>> from anytreePyt import Node
         >>> root = Node("root")
         >>> s0 = Node("sub0", parent=root, edge=2)
         >>> s0b = Node("sub0B", parent=s0, foo=4, edge=109)
@@ -59,7 +59,7 @@ class DotExporter(object):
 
         A directed graph:
 
-        >>> from anytree.exporter import DotExporter
+        >>> from anytreePyt.exporter import DotExporter
         >>> for line in DotExporter(root):
         ...     print(line)
         digraph tree {
@@ -90,7 +90,7 @@ class DotExporter(object):
         ...     return 'label="%s:%s"' % (node.name, child.name)
         >>> def edgetypefunc(node, child):
         ...     return '--'
-                >>> from anytree.exporter import DotExporter
+                >>> from anytreePyt.exporter import DotExporter
         >>> for line in DotExporter(root, graph="graph",
         ...                             nodenamefunc=nodenamefunc,
         ...                             nodeattrfunc=lambda node: "shape=box",
@@ -191,7 +191,7 @@ class DotExporter(object):
         """
         Write graph to `filename`.
 
-        >>> from anytree import Node
+        >>> from anytreePyt import Node
         >>> root = Node("root")
         >>> s0 = Node("sub0", parent=root)
         >>> s0b = Node("sub0B", parent=s0)
@@ -202,7 +202,7 @@ class DotExporter(object):
         >>> s1c = Node("sub1C", parent=s1)
         >>> s1ca = Node("sub1Ca", parent=s1c)
 
-        >>> from anytree.exporter import DotExporter
+        >>> from anytreePyt.exporter import DotExporter
         >>> DotExporter(root).to_dotfile("tree.dot")
 
         The generated file should be handed over to the `dot` tool from the

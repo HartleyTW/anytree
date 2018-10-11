@@ -40,6 +40,32 @@ The only tree relevant information is the `parent` attribute.
 If `None` the node is root node.
 If set to another node, the node becomes the child of it.
 
+>>> from anytreePyt import Node, RenderTree
+>>> udo = Node("Udo")
+>>> marc = Node("Marc")
+>>> lian = Node("Lian", parent=marc)
+>>> print(RenderTree(udo))
+Node('/Udo')
+>>> print(RenderTree(marc))
+Node('/Marc')
+└── Node('/Marc/Lian')
+
+Every node has an
+If set to another node, the node becomes the child of it.
+
+>>> from anytreePyt import Node, RenderTree
+>>> udo = Node("Udo")
+>>> marc = Node("Marc")
+>>> lian = Node("Lian", parent=marc)
+>>> print(RenderTree(udo))
+Node('/Udo')
+>>> print(RenderTree(marc))
+Node('/Marc')
+└── Node('/Marc/Lian')
+
+Every node has an
+If set to another node, the node becomes the child of it.
+
 >>> from anytree import Node, RenderTree
 >>> udo = Node("Udo")
 >>> marc = Node("Marc")
@@ -184,6 +210,18 @@ This separator can be overwritten:
 MyNode('|Udo')
 ├── MyNode('|Udo|Dan')
 └── MyNode('|Udo|Marc')
+
+The resolver takes the custom separator also into account:
+
+>>> from anytreePyt import Resolver
+>>> r = Resolver()
+>>> r.glob(udo, "
+
+The resolver takes the custom separator also into account:
+
+>>> from anytreePyt import Resolver
+>>> r = Resolver()
+>>> r.glob(udo, "
 
 The resolver takes the custom separator also into account:
 

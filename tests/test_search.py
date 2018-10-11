@@ -1,13 +1,13 @@
 from nose.tools import eq_
 
-from anytree import AsciiStyle
-from anytree import Node
-from anytree import PreOrderIter
-from anytree import RenderTree
-from anytree import find
-from anytree import find_by_attr
-from anytree import findall, CountError
-from anytree import findall_by_attr
+from anytreePyt import AsciiStyle
+from anytreePyt import Node
+from anytreePyt import PreOrderIter
+from anytreePyt import RenderTree
+from anytreePyt import find
+from anytreePyt import find_by_attr
+from anytreePyt import findall, CountError
+from anytreePyt import findall_by_attr
 from helper import assert_raises
 
 

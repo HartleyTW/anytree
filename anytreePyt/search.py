@@ -1,6 +1,6 @@
 """Node Searching."""
 
-from anytree.iterators import PreOrderIter
+from anytreePyt.iterators import PreOrderIter
 
 
 def findall(node, filter_=None, stop=None, maxlevel=None, mincount=None, maxcount=None):
@@ -21,7 +21,7 @@ def findall(node, filter_=None, stop=None, maxlevel=None, mincount=None, maxcoun
 
     Example tree:
 
-    >>> from anytree import Node, RenderTree, AsciiStyle
+    >>> from anytreePyt import Node, RenderTree, AsciiStyle
     >>> f = Node("f")
     >>> b = Node("b", parent=f)
     >>> a = Node("a", parent=b)
@@ -80,7 +80,7 @@ def findall_by_attr(node, value, name="name", maxlevel=None, mincount=None, maxc
 
     Example tree:
 
-    >>> from anytree import Node, RenderTree, AsciiStyle
+    >>> from anytreePyt import Node, RenderTree, AsciiStyle
     >>> f = Node("f")
     >>> b = Node("b", parent=f)
     >>> a = Node("a", parent=b)
@@ -124,7 +124,7 @@ def find(node, filter_=None, stop=None, maxlevel=None):
 
     Example tree:
 
-    >>> from anytree import Node, RenderTree, AsciiStyle
+    >>> from anytreePyt import Node, RenderTree, AsciiStyle
     >>> f = Node("f")
     >>> b = Node("b", parent=f)
     >>> a = Node("a", parent=b)
@@ -173,7 +173,7 @@ def find_by_attr(node, value, name="name", maxlevel=None):
 
     Example tree:
 
-    >>> from anytree import Node, RenderTree, AsciiStyle
+    >>> from anytreePyt import Node, RenderTree, AsciiStyle
     >>> f = Node("f")
     >>> b = Node("b", parent=f)
     >>> a = Node("a", parent=b)

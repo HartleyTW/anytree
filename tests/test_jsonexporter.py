@@ -4,8 +4,8 @@ from tempfile import NamedTemporaryFile
 
 from nose.tools import eq_
 
-from anytree import AnyNode
-from anytree.exporter import JsonExporter
+from anytreePyt import AnyNode
+from anytreePyt.exporter import JsonExporter
 
 
 def test_json_exporter():

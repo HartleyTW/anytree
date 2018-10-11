@@ -6,7 +6,7 @@ class PostOrderIter(AbstractIter):
     """
     Iterate over tree applying post-order strategy starting at `node`.
 
-    >>> from anytree import Node, RenderTree, AsciiStyle, PostOrderIter
+    >>> from anytreePyt import Node, RenderTree, AsciiStyle, PostOrderIter
     >>> f = Node("f")
     >>> b = Node("b", parent=f)
     >>> a = Node("a", parent=b)

@@ -7,6 +7,24 @@ The `Node._pre_attach` and `Node._pre_detach` hookups can be used
 for blocking tree modifications.
 If they raise an `Exception`, the tree is not modified.
 
+>>> from anytreePyt import NodeMixin, RenderTree
+
+The exception:
+
+>>> class ReadOnlyError(RuntimeError):
+...     pass
+
+
+
+>>> from anytreePyt import NodeMixin, RenderTree
+
+The exception:
+
+>>> class ReadOnlyError(RuntimeError):
+...     pass
+
+
+
 >>> from anytree import NodeMixin, RenderTree
 
 The exception:

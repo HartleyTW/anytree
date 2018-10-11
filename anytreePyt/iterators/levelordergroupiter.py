@@ -10,7 +10,7 @@ class LevelOrderGroupIter(AbstractIter):
     nodes at level 0 (always `node`). The second tuple contains the nodes at level 1
     (children of `node`). The next level contains the children of the children, and so on.
 
-    >>> from anytree import Node, RenderTree, AsciiStyle, LevelOrderGroupIter
+    >>> from anytreePyt import Node, RenderTree, AsciiStyle, LevelOrderGroupIter
     >>> f = Node("f")
     >>> b = Node("b", parent=f)
     >>> a = Node("a", parent=b)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# anytree documentation build configuration file, created by
+# anytreePyt documentation build configuration file, created by
 # sphinx-quickstart on Fri Aug 26 19:57:13 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -17,7 +17,7 @@ import sys
 import os
 
 
-name = "anytree"
+name = "anytreePyt"
 version = "2.4.3"
 author = 'c0fec0de'
 description = "Python Tree Data"

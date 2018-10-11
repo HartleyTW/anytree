@@ -10,7 +10,7 @@ class Node(NodeMixin, object):
         u"""
         A simple tree node with a `name` and any `kwargs`.
 
-        >>> from anytree import Node, RenderTree
+        >>> from anytreePyt import Node, RenderTree
         >>> root = Node("root")
         >>> s0 = Node("sub0", parent=root)
         >>> s0b = Node("sub0B", parent=s0, foo=4, bar=109)

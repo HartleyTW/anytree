@@ -2,13 +2,13 @@
 from nose.tools import eq_
 
 from helper import assert_raises
-from anytree import AnyNode
-from anytree import LoopError
-from anytree import Node
-from anytree import NodeMixin
-from anytree import PostOrderIter
-from anytree import PreOrderIter
-from anytree import TreeError
+from anytreePyt import AnyNode
+from anytreePyt import LoopError
+from anytreePyt import Node
+from anytreePyt import NodeMixin
+from anytreePyt import PostOrderIter
+from anytreePyt import PreOrderIter
+from anytreePyt import TreeError
 
 
 def test_node_parent_error():

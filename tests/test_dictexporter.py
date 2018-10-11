@@ -1,8 +1,8 @@
 from nose.tools import eq_
 
-from anytree import AnyNode
-from anytree import Node
-from anytree.exporter import DictExporter
+from anytreePyt import AnyNode
+from anytreePyt import Node
+from anytreePyt.exporter import DictExporter
 
 
 def test_dict_exporter():

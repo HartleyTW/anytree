@@ -16,8 +16,8 @@ class DictExporter(object):
             childiter: child iterator for sorting and/or filtering.
 
         >>> from pprint import pprint  # just for nice printing
-        >>> from anytree import AnyNode
-        >>> from anytree.exporter import DictExporter
+        >>> from anytreePyt import AnyNode
+        >>> from anytreePyt.exporter import DictExporter
         >>> root = AnyNode(a="root")
         >>> s0 = AnyNode(a="sub0", parent=root)
         >>> s0a = AnyNode(a="sub0A", b="foo", parent=s0)

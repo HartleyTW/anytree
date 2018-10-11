@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from anytree import Node
-from anytree import RenderTree
-from anytree.importer import IndentedStringImporter
+from anytreePyt import Node
+from anytreePyt import RenderTree
+from anytreePyt.importer import IndentedStringImporter
 
 
 linelist = [

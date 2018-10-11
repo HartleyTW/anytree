@@ -6,8 +6,8 @@ from os.path import exists
 from os.path import join
 from shutil import rmtree
 
-from anytree import Node
-from anytree.exporter import DotExporter
+from anytreePyt import Node
+from anytreePyt.exporter import DotExporter
 
 TESTPATH = dirname(__file__)
 GENPATH = join(TESTPATH, "dotexport")

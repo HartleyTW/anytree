@@ -18,8 +18,8 @@ class JsonImporter(object):
                     :any:`json.load`/:any:`json.loads`.
                     See documentation for reference.
 
-        >>> from anytree.importer import JsonImporter
-        >>> from anytree import RenderTree
+        >>> from anytreePyt.importer import JsonImporter
+        >>> from anytreePyt import RenderTree
         >>> importer = JsonImporter()
         >>> data = '''
         ... {

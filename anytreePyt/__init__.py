@@ -6,7 +6,7 @@ __version__ = "2.4.3"
 __author__ = "c0fec0de"
 __author_email__ = "c0fec0de@gmail.com"
 __description__ = """Powerful and Lightweight Python Tree Data Structure.."""
-__url__ = "https://github.com/c0fec0de/anytree"
+__url__ = "https://github.com/c0fec0de/anytreePyt"
 
 from .search import CountError  # noqa
 from .search import find  # noqa

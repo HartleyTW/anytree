@@ -6,7 +6,7 @@ class LevelOrderIter(AbstractIter):
     """
     Iterate over tree applying level-order strategy starting at `node`.
 
-    >>> from anytree import Node, RenderTree, AsciiStyle, LevelOrderIter
+    >>> from anytreePyt import Node, RenderTree, AsciiStyle, LevelOrderIter
     >>> f = Node("f")
     >>> b = Node("b", parent=f)
     >>> a = Node("a", parent=b)

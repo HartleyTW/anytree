@@ -9,7 +9,7 @@ class PreOrderIter(AbstractIter):
     Start at root and go-down until reaching a leaf node.
     Step upwards then, and search for the next leafs.
 
-    >>> from anytree import Node, RenderTree, AsciiStyle, PreOrderIter
+    >>> from anytreePyt import Node, RenderTree, AsciiStyle, PreOrderIter
     >>> f = Node("f")
     >>> b = Node("b", parent=f)
     >>> a = Node("a", parent=b)

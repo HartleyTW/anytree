@@ -17,8 +17,8 @@ class JsonExporter(object):
                     :any:`json.dump`/:any:`json.dumps`.
                     See documentation for reference.
 
-        >>> from anytree import AnyNode
-        >>> from anytree.exporter import JsonExporter
+        >>> from anytreePyt import AnyNode
+        >>> from anytreePyt.exporter import JsonExporter
         >>> root = AnyNode(a="root")
         >>> s0 = AnyNode(a="sub0", parent=root)
         >>> s0a = AnyNode(a="sub0A", b="foo", parent=s0)

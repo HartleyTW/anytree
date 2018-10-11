@@ -3,7 +3,7 @@ def commonancestors(*nodes):
     """
     Determine common ancestors of `nodes`.
 
-    >>> from anytree import Node
+    >>> from anytreePyt import Node
     >>> udo = Node("Udo")
     >>> marc = Node("Marc", parent=udo)
     >>> lian = Node("Lian", parent=marc)

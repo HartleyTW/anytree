@@ -2,10 +2,13 @@
 
 import warnings
 
-from anytree.iterators import PreOrderIter
+from anytreePyt.iterators import PreOrderIter
 
 from .exceptions import LoopError
 from .exceptions import TreeError
+
+import torch
+
 
 
 class NodeMixin(object):
@@ -21,7 +24,7 @@ class NodeMixin(object):
     If `None` the :any:`NodeMixin` is root node.
     If set to another node, the :any:`NodeMixin` becomes the child of it.
 
-    >>> from anytree import NodeMixin, RenderTree
+    >>> from anytreePyt import NodeMixin, RenderTree
     >>> class MyBaseClass(object):
     ...     foo = 4
     >>> class MyClass(MyBaseClass, NodeMixin):  # Add Node feature
@@ -44,6 +47,25 @@ class NodeMixin(object):
     └── my2  0 2
     """
 
+
+    def setNetwork(self, network):
+        print('network added')
+        self.network = network
+        pass
+
+    def feedNetwork(self, input):
+        nodeToReturn = None
+        featureMaps, decision = self.network(input)
+        _, predicted = torch.max(decision.data, 1)
+        for c in self.children:
+            print(c.name)
+            if c.name == 'A':
+                nodeToReturn = c
+        print(self.children)
+        print(predicted)
+        return featureMaps, nodeToReturn
+
+
     @property
     def parent(self):
         u"""
@@ -52,7 +74,7 @@ class NodeMixin(object):
         On set, the node is detached from any previous parent node and attached
         to the new node.
 
-        >>> from anytree import Node, RenderTree
+        >>> from anytreePyt import Node, RenderTree
         >>> udo = Node("Udo")
         >>> marc = Node("Marc")
         >>> lian = Node("Lian", parent=marc)
@@ -143,7 +165,7 @@ class NodeMixin(object):
         """
         All child nodes.
 
-        >>> from anytree import Node
+        >>> from anytreePyt import Node
         >>> n = Node("n")
         >>> a = Node("a", parent=n)
         >>> b = Node("b", parent=n)
@@ -252,7 +274,7 @@ class NodeMixin(object):
         """
         Path of this `Node`.
 
-        >>> from anytree import Node
+        >>> from anytreePyt import Node
         >>> udo = Node("Udo")
         >>> marc = Node("Marc", parent=udo)
         >>> lian = Node("Lian", parent=marc)
@@ -279,7 +301,7 @@ class NodeMixin(object):
         """
         All parent nodes and their parent nodes.
 
-        >>> from anytree import Node
+        >>> from anytreePyt import Node
         >>> udo = Node("Udo")
         >>> marc = Node("Marc", parent=udo)
         >>> lian = Node("Lian", parent=marc)
@@ -308,7 +330,7 @@ class NodeMixin(object):
         """
         All child nodes and all their child nodes.
 
-        >>> from anytree import Node
+        >>> from anytreePyt import Node
         >>> udo = Node("Udo")
         >>> marc = Node("Marc", parent=udo)
         >>> lian = Node("Lian", parent=marc)
@@ -328,7 +350,7 @@ class NodeMixin(object):
         """
         Tree Root Node.
 
-        >>> from anytree import Node
+        >>> from anytreePyt import Node
         >>> udo = Node("Udo")
         >>> marc = Node("Marc", parent=udo)
         >>> lian = Node("Lian", parent=marc)
@@ -349,7 +371,7 @@ class NodeMixin(object):
         """
         Tuple of nodes with the same parent.
 
-        >>> from anytree import Node
+        >>> from anytreePyt import Node
         >>> udo = Node("Udo")
         >>> marc = Node("Marc", parent=udo)
         >>> lian = Node("Lian", parent=marc)
@@ -375,7 +397,7 @@ class NodeMixin(object):
         """
         `Node` has no children (External Node).
 
-        >>> from anytree import Node
+        >>> from anytreePyt import Node
         >>> udo = Node("Udo")
         >>> marc = Node("Marc", parent=udo)
         >>> lian = Node("Lian", parent=marc)
@@ -393,7 +415,7 @@ class NodeMixin(object):
         """
         `Node` is tree root.
 
-        >>> from anytree import Node
+        >>> from anytreePyt import Node
         >>> udo = Node("Udo")
         >>> marc = Node("Marc", parent=udo)
         >>> lian = Node("Lian", parent=marc)
@@ -411,7 +433,7 @@ class NodeMixin(object):
         """
         Number of edges on the longest path to a leaf `Node`.
 
-        >>> from anytree import Node
+        >>> from anytreePyt import Node
         >>> udo = Node("Udo")
         >>> marc = Node("Marc", parent=udo)
         >>> lian = Node("Lian", parent=marc)
@@ -432,7 +454,7 @@ class NodeMixin(object):
         """
         Number of edges to the root `Node`.
 
-        >>> from anytree import Node
+        >>> from anytreePyt import Node
         >>> udo = Node("Udo")
         >>> marc = Node("Marc", parent=udo)
         >>> lian = Node("Lian", parent=marc)

@@ -18,6 +18,118 @@ by `yaml.dump`.
 
 >>> import yaml
 >>> from anytree import AnyNode
+>>> from anytreePyt.exporter import DictExporter
+
+Example tree:
+
+>>> root = AnyNode(a="root")
+>>> s0 = AnyNode(a="sub0", parent=root)
+>>> s0a = AnyNode(a="sub0A", b="foo", parent=s0)
+>>> s0b = AnyNode(a="sub0B", parent=s0)
+>>> s1 = AnyNode(a="sub1", parent=root)
+
+Export to dictionary and convert to YAML:
+
+>>> dct = DictExporter().export(root)
+>>> print(yaml.dump(dct, default_flow_style=False))
+a: root
+children:
+- a: sub0
+  children:
+  - a: sub0A
+    b: foo
+  - a: sub0B
+- a: sub1
+<BLANKLINE>
+
+
+
+>>> import yaml
+>>> from anytree import AnyNode
+>>> from anytreePyt.exporter import DictExporter
+
+Example tree:
+
+>>> root = AnyNode(a="root")
+>>> s0 = AnyNode(a="sub0", parent=root)
+>>> s0a = AnyNode(a="sub0A", b="foo", parent=s0)
+>>> s0b = AnyNode(a="sub0B", parent=s0)
+>>> s1 = AnyNode(a="sub1", parent=root)
+
+Export to dictionary and convert to YAML:
+
+>>> dct = DictExporter().export(root)
+>>> print(yaml.dump(dct, default_flow_style=False))
+a: root
+children:
+- a: sub0
+  children:
+  - a: sub0A
+    b: foo
+  - a: sub0B
+- a: sub1
+<BLANKLINE>
+
+
+
+>>> import yaml
+>>> from anytreePyt import AnyNode
+>>> from anytreePyt.exporter import DictExporter
+
+Example tree:
+
+>>> root = AnyNode(a="root")
+>>> s0 = AnyNode(a="sub0", parent=root)
+>>> s0a = AnyNode(a="sub0A", b="foo", parent=s0)
+>>> s0b = AnyNode(a="sub0B", parent=s0)
+>>> s1 = AnyNode(a="sub1", parent=root)
+
+Export to dictionary and convert to YAML:
+
+>>> dct = DictExporter().export(root)
+>>> print(yaml.dump(dct, default_flow_style=False))
+a: root
+children:
+- a: sub0
+  children:
+  - a: sub0A
+    b: foo
+  - a: sub0B
+- a: sub1
+<BLANKLINE>
+
+
+
+>>> import yaml
+>>> from anytreePyt import AnyNode
+>>> from anytreePyt.exporter import DictExporter
+
+Example tree:
+
+>>> root = AnyNode(a="root")
+>>> s0 = AnyNode(a="sub0", parent=root)
+>>> s0a = AnyNode(a="sub0A", b="foo", parent=s0)
+>>> s0b = AnyNode(a="sub0B", parent=s0)
+>>> s1 = AnyNode(a="sub1", parent=root)
+
+Export to dictionary and convert to YAML:
+
+>>> dct = DictExporter().export(root)
+>>> print(yaml.dump(dct, default_flow_style=False))
+a: root
+children:
+- a: sub0
+  children:
+  - a: sub0A
+    b: foo
+  - a: sub0B
+- a: sub1
+<BLANKLINE>
+
+
+
+>>> import yaml
+>>> from anytree import AnyNode
 >>> from anytree.exporter import DictExporter
 
 Example tree:
@@ -55,6 +167,78 @@ Import
 
 The `yaml.load` function reads YAML data --- a dictionary, which
 :any:`DictImporter` converts to a tree.
+
+>>> import yaml
+>>> from anytreePyt.importer import DictImporter
+>>> from pprint import pprint  # just for nice printing
+>>> from anytree import RenderTree  # just for nice printing
+
+Example data:
+
+>>> data = """
+... a: root
+... children:
+... - a: sub0
+...   children:
+...   - a: sub0A
+...     b: foo
+...   - a: sub0B
+... - a: sub1
+... """
+
+Import to dictionary and convert to tree:
+
+>>> dct = yaml.load(data)
+>>> pprint(dct)
+{'a': 'root',
+ 'children': [{'a': 'sub0',
+               'children': [{'a': 'sub0A', 'b': 'foo'}, {'a': 'sub0B'}]},
+              {'a': 'sub1'}]}
+>>> root = DictImporter().import_(dct)
+>>> print(RenderTree(root))
+AnyNode(a='root')
+├── AnyNode(a='sub0')
+│   ├── AnyNode(a='sub0A', b='foo')
+│   └── AnyNode(a='sub0B')
+└── AnyNode(a='sub1')
+
+
+
+>>> import yaml
+>>> from anytreePyt.importer import DictImporter
+>>> from pprint import pprint  # just for nice printing
+>>> from anytree import RenderTree  # just for nice printing
+
+Example data:
+
+>>> data = """
+... a: root
+... children:
+... - a: sub0
+...   children:
+...   - a: sub0A
+...     b: foo
+...   - a: sub0B
+... - a: sub1
+... """
+
+Import to dictionary and convert to tree:
+
+>>> dct = yaml.load(data)
+>>> pprint(dct)
+{'a': 'root',
+ 'children': [{'a': 'sub0',
+               'children': [{'a': 'sub0A', 'b': 'foo'}, {'a': 'sub0B'}]},
+              {'a': 'sub1'}]}
+>>> root = DictImporter().import_(dct)
+>>> print(RenderTree(root))
+AnyNode(a='root')
+├── AnyNode(a='sub0')
+│   ├── AnyNode(a='sub0A', b='foo')
+│   └── AnyNode(a='sub0B')
+└── AnyNode(a='sub1')
+
+
 
 >>> import yaml
 >>> from anytree.importer import DictImporter

@@ -2,8 +2,8 @@
 
 from nose.tools import eq_
 
-from anytree import Node
-from anytree import RenderTree
+from anytreePyt import Node
+from anytreePyt import RenderTree
 
 
 def test_stackoverflow():

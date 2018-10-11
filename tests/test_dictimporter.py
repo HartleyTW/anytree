@@ -2,10 +2,10 @@
 from copy import deepcopy
 from nose.tools import eq_
 
-from anytree import Node
-from anytree import RenderTree
-from anytree.exporter import DictExporter
-from anytree.importer import DictImporter
+from anytreePyt import Node
+from anytreePyt import RenderTree
+from anytreePyt.exporter import DictExporter
+from anytreePyt.importer import DictImporter
 
 from helper import eq_str
 

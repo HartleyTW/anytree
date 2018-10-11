@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from anytree import AnyNode
+from anytreePyt import AnyNode
 
 
 class DictImporter(object):
@@ -15,8 +15,8 @@ class DictImporter(object):
         Keyword Args:
             nodecls: class used for nodes.
 
-        >>> from anytree.importer import DictImporter
-        >>> from anytree import RenderTree
+        >>> from anytreePyt.importer import DictImporter
+        >>> from anytreePyt import RenderTree
         >>> importer = DictImporter()
         >>> data = {
         ...     'a': 'root',

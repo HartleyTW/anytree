@@ -1,10 +1,10 @@
-from anytree import LevelGroupOrderIter
-from anytree import LevelOrderGroupIter
-from anytree import LevelOrderIter
-from anytree import Node
-from anytree import PostOrderIter
-from anytree import PreOrderIter
-from anytree import ZigZagGroupIter
+from anytreePyt import LevelGroupOrderIter
+from anytreePyt import LevelOrderGroupIter
+from anytreePyt import LevelOrderIter
+from anytreePyt import Node
+from anytreePyt import PostOrderIter
+from anytreePyt import PreOrderIter
+from anytreePyt import ZigZagGroupIter
 from nose.tools import eq_
 
 

@@ -23,7 +23,7 @@ class Resolver(object):
 
         An example module tree:
 
-        >>> from anytree import Node
+        >>> from anytreePyt import Node
         >>> top = Node("top", parent=None)
         >>> sub0 = Node("sub0", parent=top)
         >>> sub0sub0 = Node("sub0sub0", parent=sub0)
@@ -94,7 +94,7 @@ class Resolver(object):
 
         An example module tree:
 
-        >>> from anytree import Node
+        >>> from anytreePyt import Node
         >>> top = Node("top", parent=None)
         >>> sub0 = Node("sub0", parent=top)
         >>> sub0sub0 = Node("sub0", parent=sub0)
