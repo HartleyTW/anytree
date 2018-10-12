@@ -53,17 +53,28 @@ class NodeMixin(object):
         self.network = network
         pass
 
-    def feedNetwork(self, input):
+    def feedNetwork(self, input, train=False, fmOnly=False):
         nodeToReturn = None
         featureMaps, decision = self.network(input)
-        _, predicted = torch.max(decision.data, 1)
-        for c in self.children:
-            print(c.name)
-            if c.name == 'A':
-                nodeToReturn = c
-        print(self.children)
-        print(predicted)
-        return featureMaps, nodeToReturn
+
+        # for c in self.children:
+        #     print(c.name)
+        #     if c.name == 'A':
+        #         nodeToReturn = c
+        if train:
+            return decision
+        if fmOnly:
+            return featureMaps
+        else:
+            _, predicted = torch.max(decision.data, 1)
+            nodeToReturn = self.children[predicted]
+            return featureMaps, predicted, nodeToReturn
+
+    def hasNetwork(self):
+        if self.network is None:
+            return False
+        else:
+            return True
 
 
     @property

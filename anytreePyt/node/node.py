@@ -35,6 +35,7 @@ class Node(NodeMixin, object):
         self.__dict__.update(kwargs)
         self.name = name
         self.parent = parent
+        self.network = None
 
     def __repr__(self):
         args = ["%r" % self.separator.join([""] + [str(node.name) for node in self.path])]
