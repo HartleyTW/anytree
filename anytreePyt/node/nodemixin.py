@@ -76,6 +76,18 @@ class NodeMixin(object):
         else:
             return True
 
+    def storeNetwork(self):
+        self.bestParams = self.network.state_dict()
+
+    def reloadStored(self):
+        self.network.load_state_dict(self.bestParams)
+
+    def saveNetwork(self):
+        torch.save(self.network.state_dict(), str(self.name)+'.pyt')
+
+    def loadNetworkFromDisk(self):
+        self.bestParams = torch.load(str(self.name)+'.pyt')
+
 
     @property
     def parent(self):
